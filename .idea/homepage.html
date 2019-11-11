@@ -1,18 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+         .testimonialsC{
+            display: flex;
+            border: 1px #ccc solid;
+            padding: 10px;
+            width: 100%;
+        }
+        .newscontainer{
+            display: flex;
+            border: 1px #ccc solid;
+            padding: 10px;
+            width: 100%;
+        }
+        .contactsC{
+            display: flex;
+            border: 1px #ccc solid;
+
+            width: 100%;
+            background-color: black;
+            color: aliceblue;
+
+        }
+        .contactsC div{
+            border: 1px #ccc solid;
+            padding: 10px;
+            width: 100%;
+        }
+        .newscontainer div{
+            border: 1px #ccc solid;
+            padding: 10px;
+            width: 100%;
+        }
+        .testimonialsC div{
+            border: 1px #ccc solid;
+            padding: 10px;
+            width: 100%;
+        }
+        .partnerscontainer{
+            display: flex;
+        }
+        .chef1,{
+            background-image: url(http://shingiraichabika.info/seshpizza/chef3.jpg);
+
+        }
+        .chef2,{
+            background-image: url(http://shingiraichabika.info/seshpizza/chef3.jpg);
+
+        }
+        .chef3,{
+            background-image: url(http://shingiraichabika.info/seshpizza/chef3.jpg);
+
+        }
+        .myslidesdiv{
+            border-radius: 10px;
+        }
+        .menu{
+            background-image: url(http://shingiraichabika.info/seshpizza/menubackg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 8px;
+            color: white;
+            text-align: center;
+            height: 240px;
+        }
+        .testimonialsC{
+            display: flex;
+        }
+        .heading{
+         text-align: center;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Title</title>
+
+
 </head>
 <body>
+<form name="myform" action="orderpage.html" onsubmit="return checkForm()" method="post">
 <nav>
     <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#music">Music</a></li>
-        <li><a href="#video">Videos</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#bookings">Bookings</a></li>
+        <li><a class="active" href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#music">MENU</a></li>
+        <li><a href="#video">PAGES</a></li>
+        <li><a href="#events">NEWS</a></li>
+        <li><a href="#bookings">CONTACTS</a></li>
     </ul>
 </nav>
 
@@ -20,5 +118,53 @@
     <img class="myslides" src="http://shingiraichabika.info/whatsup/pizzasite2.jpg" style="width:100%">
     <img class="myslides" src="http://shingiraichabika.info/whatsup/pizzasite3.jpg" style="width:100%">
 </div>
+    <div class="about"></div>
+
+    <h3 class="heading">Our Menu</h3>
+    <div class="menu">
+      <p> Tuna Salad............$25
+        <p>Chicken Pesto.........$15 <p> Pepperoni.............$12 <p>cheese................$10
+        <p>meatlovers............$15
+        <p> <input type="submit" value="Order online">
+    </div>
+    <div class="pages"></div>
+</div>
+<div>
+      <h3 class="heading">Our Chefs</h3>
+    <div class="newscontainer">
+       <div class="chef1">
+           <img src="http://shingiraichabika.info/seshpizza/chef1.jpg" >
+        </div>
+        <div class="chef2">
+            <img src="http://shingiraichabika.info/seshpizza/chef2.jpg" >
+        </div>
+        <div class="chef3"> <p><img src="http://shingiraichabika.info/seshpizza/chef3.jpg" ></p>
+        </div>
+    </div>
+
+    <h3 class="heading">Our Testimonials</h3>
+    <div class="testimonialsC">
+        <div class="testimonia1"><h3 class="heading">George</h3>
+            <p>"Provides the best pizza, not only in the town but nationally"</div>
+        <div class="testimonia2"> <h3 class="heading">Gini</h3>
+           <P> "The wood grilled pizza reminds me of those good old childhood days"</div>
+        <div class="testimonia3"> <h3 class="heading">Salah</h3>
+            <p>"Im from florida but i would definitely fly back to Georgia for this pizza"</div>
+    </div>
+
+    <div class="contactsC">
+     <div class="address">Address: 2266 hidden Glen Drive SE 30067
+     <p>Email: seshpizza@outlook.com</p>
+     <p>Phone: 404 222 2222</p></div>
+        <div class="om">Opening hours
+        <p>10am to 11pm</p></div>
+        <div class="socialm">
+            <img src="http://shingiraichabika.info/closer/facebook.png">
+            <img src="http://shingiraichabika.info/closer/instagram.png">
+            <img src="http://shingiraichabika.info/closer/youtube.png">
+        </div>
+    </div>
+
+    <script src="jsfile.js"> </script>
 </body>
 </html>
