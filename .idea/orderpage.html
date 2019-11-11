@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            text-align: center;
+            background-color: 	#FFE4C4;
+        }
+        .picture{
+            border-radius: 50%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h3> Start your order:  </h3>
+    <label for="name">First name</label>
+    &nbsp <input type="text" name="firstname" id="firstname">
+
+    <p> <label for="name">last name</label>
+        &nbsp &nbsp  <input type="text" name="lastname" id="lastname">
+
+    <p>  <label for="name">Full address</label>
+        <input type="text" name="fulladdress" id="fulladdress">
+
+
+
+     <h4> Our Menu </h4>
+    <strong> Choose size: </strong>
+
+    <br> <label for="small"> small</label>
+    &nbsp &nbsp  <input type="radio" name="small">
+
+    <br> <label for="medium"> medium</label>
+    <input type="radio" name="medium">
+
+    <br> <label for="large"> Large</label>
+    &nbsp &nbsp <input type="radio" name="large">
+
+    <p> <strong> Choose toppings: </strong>
+
+        <br>  <label for="hawaiian"> hawaiian</label>
+        <input type="checkbox" name="hawaiian">
+        &nbsp    <img id="hawaiianimage" class="picture" src="http://shingiraichabika.info/seshpizza/hawaiian.jpg">
+
+        <br>  <label for="pepperoni"> pepperoni</label>
+        <input type="checkbox" name="pepperoni">
+        <img id="pepperoni" class="picture" src="http://shingiraichabika.info/seshpizza/pepperoni.jpg">
+
+        <br>  <label for="cheese"> cheese</label>
+        <input type="checkbox" name="cheese">
+        &nbsp  &nbsp    <img id="cheese" class="picture" src="http://shingiraichabika.info/seshpizza/cheese.jpg">
+
+        <br>  <label for="veggie"> veggie</label>
+        <input type="checkbox" name="veggie">
+        &nbsp  &nbsp &nbsp  <img id="veggie" class="picture" src="http://shingiraichabika.info/seshpizza/veggie.jpg">
+
+        <br>  <label for="buffalochicken"> buffalo chicken</label>
+        <input type="checkbox" name="buffalochicken">
+        <img id="buffalochicken" class="picture" src="http://shingiraichabika.info/seshpizza/buffalochicken.jpg">
+
+
+    <p>   <p> <input type="submit" value="submit">
+
+     <script>
+         function checkForm() {
+
+             var firstname = document.forms["myform"]["firstname"].value;
+             var lastname = document.forms["myform"]["lastname"].value;
+             var fulladdress = document.forms["myform"]["fulladdress"].value;
+
+
+             if (firstname == "" || lastname == "" || fulladdress == "") {
+                 alert("Please make your first, last name and full address have been entered!");
+                 return false;
+             }}
+
+         var myIndex = 0;
+         carousel();
+     </script>
+
+</body>
+</html>
