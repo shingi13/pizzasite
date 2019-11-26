@@ -70,18 +70,14 @@
         }
     </style>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Order</title>
 </head>
 <body>
     <form name="myform" action="http://webdevbasics.net/scripts/demo.php" onsubmit="return  fn1()" method="post" >
 <nav>
     <ul>
-        <li><a class="active" href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT US</a></li>
-        <li><a href="#music">MENU</a></li>
-        <li><a href="#video">PAGES</a></li>
-        <li><a href="#events">NEWS</a></li>
-        <li><a href="#bookings">CONTACTS</a></li>
+        <li><a href="homepage.html">HOME</a></li>
+        <li><a href="#contacts">CONTACTS</a></li>
     </ul>
 </nav>
  <h3> Start your order:  </h3>
@@ -128,7 +124,7 @@
 
 
      <p> <p> <!--<button onclick="fn1(); fn2(); fn3(); return false " id="btn1" class="btn1"> click me </button> -->
-        <input type="submit" value="submit" onclick="fn1()">
+        <input target="contacts" type="submit" value="submit" onclick="fn1()">
     <div class="contactsC">
         <div class="address">Address: 2266 hidden Glen Drive SE 30067
 <p>Email: seshpizza@outlook.com</p>
