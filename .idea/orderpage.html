@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script  src="orderpage.js">
+
+    </script>
     <style>
         body{
             text-align: center;
@@ -9,11 +12,78 @@
         .picture{
             border-radius: 50%;
         }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+        .contactsC{
+            display: flex;
+            border: 1px #ccc solid;
+
+            width: 100%;
+            background-color: black;
+            color: aliceblue;
+
+        }
+        .contactsC div{
+            border: 1px #ccc solid;
+            padding: 10px;
+            width: 100%;
+        }
+        .btn1 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 10px;
+            cursor: pointer;
+            width: 20%;
+        }
+        .labels {
+            font-size: 2.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .marks {
+            color: red;
+        }
     </style>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+    <form name="myform" action="http://webdevbasics.net/scripts/demo.php" onsubmit="return  fn1()" method="post" >
+<nav>
+    <ul>
+        <li><a class="active" href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#music">MENU</a></li>
+        <li><a href="#video">PAGES</a></li>
+        <li><a href="#events">NEWS</a></li>
+        <li><a href="#bookings">CONTACTS</a></li>
+    </ul>
+</nav>
  <h3> Start your order:  </h3>
     <label for="name">First name</label>
     &nbsp <input type="text" name="firstname" id="firstname">
@@ -27,58 +97,51 @@
 
 
      <h4> Our Menu </h4>
-    <strong> Choose size: </strong>
+    <strong class="marks" > Choose size: </strong>
 
-    <br> <label for="small"> small</label>
-    &nbsp &nbsp  <input type="radio" name="small">
+    <br>
+<input id="rd1" type="radio" name="group1" value="small"> Small </input>
+<br> &nbsp &nbsp <input id="rd2" type="radio" name="group1" value="medium"> Medium </input>
+<br> <input id="rd3" type="radio" name="group1" value="large"> Large </input>
 
-    <br> <label for="medium"> medium</label>
-    <input type="radio" name="medium">
 
-    <br> <label for="large"> Large</label>
-    &nbsp &nbsp <input type="radio" name="large">
-
-    <p> <strong> Choose toppings: </strong>
-
-        <br>  <label for="hawaiian"> hawaiian</label>
-        <input type="checkbox" name="hawaiian">
+    <p> <strong class="marks" > Choose toppings: </strong>
+        <br>  <label class="labels" for="hawaiian"> HAWAIIAN</label>
+        <input type="checkbox" name="hawaiian" class="checks" id="hawaiian" value="hawaiian">
         &nbsp    <img id="hawaiianimage" class="picture" src="http://shingiraichabika.info/seshpizza/hawaiian.jpg">
 
-        <br>  <label for="pepperoni"> pepperoni</label>
-        <input type="checkbox" name="pepperoni">
+        <br>  <label class="labels" for="pepperoni"> PEPPERONI</label>
+        <input type="checkbox" class="checks" name="pepperoni" id="pepperoni" value="pepperoni">
         <img id="pepperoni" class="picture" src="http://shingiraichabika.info/seshpizza/pepperoni.jpg">
 
-        <br>  <label for="cheese"> cheese</label>
-        <input type="checkbox" name="cheese">
+        <br>  <label class="labels" for="cheese"> CHEESE</label>
+        <input type="checkbox" class="checks" name="cheese" value="cheese" id="cheese">
         &nbsp  &nbsp    <img id="cheese" class="picture" src="http://shingiraichabika.info/seshpizza/cheese.jpg">
 
-        <br>  <label for="veggie"> veggie</label>
-        <input type="checkbox" name="veggie">
+        <br>  <label class="labels" for="veggie"> VEGGIE</label>
+        <input type="checkbox" class="checks" name="veggie" value="veggie" id="veggie">
         &nbsp  &nbsp &nbsp  <img id="veggie" class="picture" src="http://shingiraichabika.info/seshpizza/veggie.jpg">
 
-        <br>  <label for="buffalochicken"> buffalo chicken</label>
-        <input type="checkbox" name="buffalochicken">
+        <br>  <label class="labels" for="buffalochicken"> BUFFALO CHICKEN</label>
+        <input type="checkbox" class="checks" name="buffalochicken" value="buffalo chicken" id="bchicken">
         <img id="buffalochicken" class="picture" src="http://shingiraichabika.info/seshpizza/buffalochicken.jpg">
 
 
-    <p>   <p> <input type="submit" value="submit">
-
-     <script>
-         function checkForm() {
-
-             var firstname = document.forms["myform"]["firstname"].value;
-             var lastname = document.forms["myform"]["lastname"].value;
-             var fulladdress = document.forms["myform"]["fulladdress"].value;
-
-
-             if (firstname == "" || lastname == "" || fulladdress == "") {
-                 alert("Please make your first, last name and full address have been entered!");
-                 return false;
-             }}
-
-         var myIndex = 0;
-         carousel();
-     </script>
+     <p> <p> <!--<button onclick="fn1(); fn2(); fn3(); return false " id="btn1" class="btn1"> click me </button> -->
+        <input type="submit" value="submit" onclick="fn1()">
+    <div class="contactsC">
+        <div class="address">Address: 2266 hidden Glen Drive SE 30067
+<p>Email: seshpizza@outlook.com</p>
+<p>Phone: 404 222 2222</p></div>
+<div class="om">Opening hours
+    <p>10am to 11pm</p></div>
+<div class="socialm">
+    <img src="http://shingiraichabika.info/closer/facebook.png">
+    <img src="http://shingiraichabika.info/closer/instagram.png">
+    <img src="http://shingiraichabika.info/closer/youtube.png">
+</div>
+</div>
+    </form>
 
 </body>
 </html>
